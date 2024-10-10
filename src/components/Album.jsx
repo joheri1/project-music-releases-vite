@@ -1,4 +1,3 @@
-/* eslint-disable react/prop-types */
 import AlbumArt from './AlbumArt'
 import AlbumName from './AlbumName'
 import AlbumArtist from './AlbumArtist'

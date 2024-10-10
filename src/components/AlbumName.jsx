@@ -1,10 +1,5 @@
-/* eslint-disable react/prop-types */
-const AlbumArtist = ({ artists }) => {
-    return (
-        <p>
-            {artists.map(artist => artist.name).join(',')}
-        </p>
-    )
-}
-
-export default AlbumArtist
+const AlbumName = ({ name }) => {
+    return <h2>{name}</h2>
+  }
+  
+  export default AlbumName

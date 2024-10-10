@@ -1,6 +1,5 @@
-/* eslint-disable react/prop-types */
-
-const AlbumArtist = ({ artists }) => {
+const AlbumArtist = ({ artists = [] }) => {
+    console.log('Artists: ', artists); // Check if artists is an array
     return (
         <p>
             {artists.map(artist => artist.name).join(',')}
