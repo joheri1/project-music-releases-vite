@@ -4,12 +4,12 @@ import AlbumArtist from './AlbumArtist'
 
 const Album = ({ albumData }) => {
   return (
-    <div>
+    <div className="album-card">
       <AlbumArt image={albumData.images[0].url} />
       <AlbumName name={albumData.name} />
       <AlbumArtist tName artists={albumData.artists} />
     </div>
-  );
-};
+  )
+}
 
-export default Album;
+export default Album

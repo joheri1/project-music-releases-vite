@@ -1,5 +1,5 @@
 const AlbumArt = ({ image }) => {
-    return <img src={image} alt="Album Art" />;
-  };
+    return <img className="album-art" src={image} alt="Album Art" />
+  }
   
-  export default AlbumArt;
+  export default AlbumArt

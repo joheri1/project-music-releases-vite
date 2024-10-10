@@ -5,7 +5,7 @@ console.log(data)
 
 export const App = () => {
   return (
-  <div>
+  <div className="album-container">
     {data.albums.items.map((album) => (
       <Album key={album.id} albumData={album} />
     ))}
