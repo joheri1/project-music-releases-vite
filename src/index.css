@@ -27,12 +27,24 @@ main {
   background-color: aquamarine;
 }
 h2 {
-  font-size: 24px;
+  font-size: 14px;
+  font-family: Helvetica #ffffff;
 }
+p {
+  font-size: 14px;
+  font-family: Helvetica #a0a0a0;
+}
+
 .album-art {
   width: 100%;
   align-items: center;
+  opacity: 1; /* Fully visible*/
+  transition: opacity 0.3s ease;
 }
+.album-art:hover {
+  opacity: 0.5; /* Darker image on hover */
+}
+
 .album-card {
   display: inline-block;
   width: 100%;
@@ -50,7 +62,6 @@ h2 {
 @media (max-width: 500px) {
   .album-card {
     background-color: coral;
-
   }
   .album-container {
     display: grid;
