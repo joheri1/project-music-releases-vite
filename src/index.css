@@ -26,13 +26,24 @@ body {
 main {
   background-color: aquamarine;
 }
-h2 {
-  font-size: 14px;
-  font-family: Helvetica #ffffff;
-}
 p {
   font-size: 14px;
   font-family: Helvetica #a0a0a0;
+}
+.album-link {
+  font-size: 14px;
+  font-family: Helvetica;
+  color: #ffffff;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  transition: all 0.2s ease; /* Smooth transition */
+}
+.album-link:hover {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .album-art {
