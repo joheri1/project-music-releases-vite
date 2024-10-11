@@ -40,8 +40,25 @@ p {
   transition: all 0.2s ease; /* Smooth transition */
 }
 .album-link:hover {
-  font-size: 24px;
+  font-size: 18px;
   color: #ffffff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.album-artist-link {
+  font-size: 14px;
+  font-family: Helvetica;
+  color: #a0a0a0;
+  text-decoration: none;
+  min-height: 44px;
+  min-width: 44px;
+  transition: all 0.2s ease; /* Smooth transition */
+}
+
+.album-artist-link:hover {
+  font-size: 18px;
+  color: #a0a0a0;
   font-weight: bold;
   text-decoration: none;
 }
