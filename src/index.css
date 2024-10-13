@@ -21,11 +21,27 @@ code {
 }
 
 body {
-  background-color: brown;
+  background-color: #2a1800;
 }
 main {
-  background-color: aquamarine;
+  background-color: #2a1800;
 }
+
+.header {
+  display: flex;
+  align-items: center;
+}
+
+.header-logo {
+  width: 50px; 
+  margin-right: 2px; 
+}
+
+h1 {
+  color: #ffffff;
+  font-family: Helvetica;
+}
+
 p {
   font-size: 14px;
   font-family: Helvetica #a0a0a0;
@@ -76,20 +92,20 @@ p {
 .album-card {
   display: inline-block;
   width: 100%;
-  background-color: blue;
+  background-color: #2a1800;
   text-align: center;
   border-radius: 10px;
 }
 .album-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  background-color: blueviolet;
+  background-color: #2a1800;
   justify-content: center;
 }
 /* MOBILE */
 @media (max-width: 500px) {
   .album-card {
-    background-color: coral;
+    background-color: #2a1800;
   }
   .album-container {
     display: grid;
@@ -103,7 +119,7 @@ p {
 /* TABLET */
 @media (min-width: 501px) and (max-width: 1024px) {
   .album-card {
-    background-color: rgb(147, 226, 43);
+    background-color: #2a1800;
   }
   .album-container {
     display: grid;
@@ -115,7 +131,7 @@ p {
 /* DESKTOP */ 
 @media (min-width: 1025px) {
   .album-card {
-    background-color: blueviolet;
+    background-color: #2a1800;
   }
   .album-container {
     display: grid;
