@@ -66,6 +66,7 @@ h1 {
   justify-content: center;
   gap: 10px;
 }
+
 .album-art-container {
   position: relative;
   width: 100%;
@@ -79,8 +80,9 @@ h1 {
   opacity: 1; 
   transition: opacity 0.3s ease;
   margin-bottom: 5px;
-  z-index: 1; /* Position album art in the back */
+  /*z-index: 1; /* Position album art in the back */
 }
+
 .album-art-container:hover .album-art {
   opacity: 0.5; /* Album gets darker on hover*/
 }
@@ -92,16 +94,16 @@ h1 {
   display: flex;
   gap: 10px;
   opacity: 0;
-  z-index: 2; /* Position album icons art to the front */
+  /*z-index: 2; /* Position album icons art to the front */
   transition: opacity 0.3s ease;
+  pointer-events: none;
 }
 
 .icon {
   width: 24px;
   height: 24px;
-  max-width: none; 
   fill: #ffffff;
-  transition: transform 0.3s ease, opacity 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
 .icon:hover {
