@@ -66,16 +66,49 @@ h1 {
   justify-content: center;
   gap: 10px;
 }
+.album-art-container {
+  position: relative;
+}
+
 .album-art {
+  display: block;
   width: 100%;
   align-items: center;
-  opacity: 1; /* Fully visible*/
+  opacity: 1; 
   transition: opacity 0.3s ease;
   margin-bottom: 5px;
+  z-index: 1; /* Position album art in the back */
 }
-.album-art:hover {
-  opacity: 0.5; /* Darker image on hover */
+.album-art-container:hover .album-art {
+  opacity: 0.5; /* Album gets darker on hover*/
 }
+.album-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0;
+  z-index: 3; /* Position album icons art to the front */
+  transition: opacity 0.3s ease;
+}
+.icon {
+  width: 24px;
+  height: 24px;
+  color: #ffffff;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+.icon:hover {
+  transform: scale(1.2);
+}
+.album-art-container:hover .album-icons {
+  opacity: 1; /* Make icons visible on hover */
+}
+.icon:hover {
+  transform: scale(1.2); /* Enlarge the icons on hover */
+}
+
 .album-link {
   font-size: 14px;
   font-family: Helvetica;
@@ -116,17 +149,6 @@ p {
   font-size: 14px;
   font-family: Helvetica;
   color: #a0a0a0;
-}
-/* ========== Icons section ========== */
-.dots-icon {
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.dots-icon:hover {
-  transform: scale(1.2); /* Enlarge on hover */
 }
 
 /* ========== Footer section ========== */
@@ -195,6 +217,10 @@ h3 {
     gap: 20px;
     max-width: 500px;
   }
+  .icon {
+    width: 16px;
+    height: 16px;
+  }
 }
 
 /* TABLET */
@@ -207,6 +233,10 @@ h3 {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
     gap: 20px;
   }
+  .icon {
+    width: 20px;
+    height: 20px;
+  }
 }
 
 /* DESKTOP */ 
@@ -218,5 +248,9 @@ h3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
+  }
+  .icon {
+    width: 24px;
+    height: 24px;
   }
 }
