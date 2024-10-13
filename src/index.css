@@ -3,10 +3,10 @@ img {
   display: block;
   max-width: 100%;
 }
-/** {
+* {
   max-width: 100%;
   overflow-x: hidden;
-}*/
+}
 
 /* ========== Global Styles ========== */
 
@@ -94,9 +94,8 @@ h1 {
   display: flex;
   gap: 10px;
   opacity: 0;
-  /*z-index: 2; /* Position album icons art to the front */
+  z-index: 2; /* Position album icons art to the front */
   transition: opacity 0.3s ease;
-  pointer-events: none;
 }
 
 .icon {
