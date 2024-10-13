@@ -3,10 +3,10 @@ img {
   display: block;
   max-width: 100%;
 }
-* {
+/** {
   max-width: 100%;
   overflow-x: hidden;
-}
+}*/
 
 /* ========== Global Styles ========== */
 
@@ -68,6 +68,8 @@ h1 {
 }
 .album-art-container {
   position: relative;
+  width: 100%;
+  height: auto;
 }
 
 .album-art {
@@ -97,6 +99,7 @@ h1 {
 .icon {
   width: 24px;
   height: 24px;
+  max-width: none; 
   fill: #ffffff;
   transition: transform 0.3s ease, opacity 0.3s ease;
 }
