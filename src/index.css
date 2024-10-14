@@ -98,26 +98,38 @@ h1 {
   transition: opacity 0.3s ease;
 }
 
-.icon {
+.album-icons {
   width: 24px;
   height: 24px;
   fill: #ffffff;
   transition: transform 0.3s ease;
 }
 
-.icon:hover {
+.album-icon:hover {
   transform: scale(1.2);
 }
 
 .album-art-container:hover .album-icons {
   opacity: 1; /* Make icons visible on hover */
 }
-
-.album-link {
+.album-title,
+.album-artist {
+  text-align: left; 
   font-size: 14px;
   font-family: Helvetica;
-  color: #ffffff;
+  margin-left: 10px;
+}
+.album-title {
+  margin-bottom: 5px;
+}
+
+.album-artist {
+  margin-top: 0;
+}
+
+.album-link {
   text-decoration: none;
+  color: #ffffff;
   min-height: 44px;
   min-width: 44px;
   transition: all 0.2s ease; /* Smooth transition */
@@ -129,10 +141,8 @@ h1 {
   text-decoration: underline;
 }
 .album-artist-link {
-  font-size: 14px;
-  font-family: Helvetica;
-  color: #a0a0a0;
   text-decoration: none;
+  color: #a0a0a0;
   min-height: 44px;
   min-width: 44px;
   transition: all 0.2s ease; /* Smooth transition */
