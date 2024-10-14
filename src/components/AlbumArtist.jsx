@@ -1,9 +1,9 @@
 const AlbumArtist = ({ artists = [] }) => {
     return (
-        <p className="album-artist">
-        {artists.map(artist => (
+      <p className="album-artist">
+      {artists.map((artist, index) => (
+        <span key={artist.id}>
           <a
-            key={artist.id}
             href={artist.external_urls.spotify}
             target="_blank"
             className="album-artist-link"
@@ -12,8 +12,10 @@ const AlbumArtist = ({ artists = [] }) => {
           >
             {artist.name}
           </a>
-        ))}
-      </p>
+          {index < artists.length - 1 && ' & '}
+        </span>
+      ))}
+    </p>
     )
 }
 
