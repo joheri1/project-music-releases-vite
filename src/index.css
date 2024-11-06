@@ -114,11 +114,11 @@ p {
   opacity: 1; /* Make icons visible on hover */
 }
 
-.album-icons .icon {
+.album-art-container:hover .album-icons .icon {
   transition: transform 0.3s ease; /* Smooth transition to "pop out" */
 }
 
-.album-icon .icon:hover {
+.album-art-container:hover .album-icons .icon:hover {
   transform: scale(1.2); /* Each Icon pops out / enlarges on hover */
 }
 
