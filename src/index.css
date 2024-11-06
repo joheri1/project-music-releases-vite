@@ -50,7 +50,7 @@ h1 {
   font-family: Helvetica;
 }
 
-/* ========== Album section ========== */
+/* ========== Album card ========== */
 
 .album-card {
   display: inline-block;
@@ -80,12 +80,15 @@ h1 {
   opacity: 1; 
   transition: opacity 0.3s ease;
   margin-bottom: 5px;
-  /*z-index: 1; /* Position album art in the back */
+  z-index: 1; /* Position album art in the back */
 }
 
 .album-art-container:hover .album-art {
   opacity: 0.5; /* Album gets darker on hover*/
 }
+
+/* ========== Album icons ========== */
+
 .album-icons {
   position: absolute;
   top: 50%;
@@ -97,10 +100,21 @@ h1 {
   z-index: 2; /* Position album icons art to the front */
   transition: opacity 0.3s ease;
 }
+.album-icons {
+  width: 24px;
+  height: 24px;
+  fill: #ffffff;
+  transition: transform 0.3s ease;
+}
+
+.album-icon:hover {
+  transform: scale(1.2);
+}
 
 .album-art-container:hover .album-icons {
   opacity: 1; /* Make icons visible on hover */
 }*/
+
 .album-title,
 .album-artist {
   text-align: left; 
