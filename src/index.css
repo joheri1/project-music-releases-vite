@@ -99,15 +99,17 @@ p {
 }
 
 .album-icons {
+  display: flex;
   position: absolute;
   top: 50%; 
   left: 50%;
+  gap: 40px;
   transform: translate(-50%, -50%);
-  display: flex;
-  gap: 10px;
   opacity: 0; /* Icons not visible */ 
   z-index: 2; /* Position album icons art to the front */
   transition: opacity 0.3s ease; /*Smooth transition to show icons on hover */
+  align-items: center;
+  justify-content: center;
 }
 
 .album-art-container:hover .album-art {
@@ -116,25 +118,21 @@ p {
 .album-art-container:hover .album-icons {
   opacity: 1; /* Make icons visible on hover */
 }
-
-.album-art-container:hover .album-icons .icon {
-  transition: transform 0.3s ease; /* Smooth transition to "pop out" */
+.icon {
+  transition: fill 0.3s ease;
+  width: 80px;
+  height: 80px;
 }
-
-.album-art-container:hover .album-icons .icon:hover {
-  transform: scale(1.2); /* Each Icon pops out / enlarges on hover */
+.play-icon {
+  background-color: transparent; 
+  border-radius: 50%;
+  transition: transform 0.3s ease; /* Smooth transition to "pop out"*/
+  margin: left right 10px;
 }
-
-.album-icons {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  display: flex;
-  gap: 10px;
-  opacity: 0;
-  z-index: 2; /* Position album icons art to the front */
-  transition: opacity 0.3s ease;
+.play-icon:hover {
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: scale(1.2); /* Play icon pops out / enlarges on hover*/
 }
 
 /* ========== Styling for Album title and Album artist ========== */
@@ -164,7 +162,6 @@ p {
   transition: all 0.2s ease; /* Smooth transition */
 }
 .album-link:hover {
-  font-size: 18px;
   color: #ffffff;
   font-weight: bold; /* Make link bold on hover */
   text-decoration: underline; /* Add underline on hover */
@@ -181,7 +178,6 @@ p {
   overflow: hidden;
 }
 .album-artist-link:hover {
-  font-size: 16px;
   color: #a0a0a0;
   font-weight: bold;
   text-decoration: underline;
@@ -251,12 +247,13 @@ h3 {
     display: grid;
     grid-template-columns: 1fr;
      /* 1 column for mobile */
-    gap: 20px;
+    gap: 30px;
     max-width: 500px;
   }
-  .icon {
-    width: 16px;
-    height: 16px;
+  .play-icon:hover {
+    background-color: transparent; /* No darker background color  */
+    transform: scale(1.0);
+    transition: none;
   }
 }
 
@@ -270,9 +267,10 @@ h3 {
     grid-template-columns: repeat(2, 1fr); /* 2 columns for tablet */
     gap: 20px;
   }
-  .icon {
-    width: 20px;
-    height: 20px;
+  .play-icon:hover {
+    background-color: transparent; /* No darker background color  */
+    transform: scale(1.0);
+    transition: none;
   }
 }
 
@@ -285,9 +283,6 @@ h3 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
-  }
-  .icon {
-    width: 24px;
-    height: 24px;
-  }
+    margin: 3px;
+  } 
 }
