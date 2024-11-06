@@ -98,20 +98,9 @@ h1 {
   transition: opacity 0.3s ease;
 }
 
-.album-icons {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-  transition: transform 0.3s ease;
-}
-
-.album-icon:hover {
-  transform: scale(1.2);
-}
-
 .album-art-container:hover .album-icons {
   opacity: 1; /* Make icons visible on hover */
-}
+}*/
 .album-title,
 .album-artist {
   text-align: left; 
