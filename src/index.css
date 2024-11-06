@@ -30,6 +30,20 @@ body {
 main {
   background-color: #1e1200;
 }
+h1 {
+  color: #FFA5A5;
+  font-family: Helvetica;
+}
+h2 {
+  font-size: 14px;
+  font-family: Helvetica; 
+  color: #a0a0a0;
+}
+p {
+  font-size: 14px;
+  font-family: Helvetica;
+  color: #a0a0a0;
+}
 
 /* ========== Header ========== */
 
@@ -43,11 +57,6 @@ main {
 .header-logo {
   width: 50px; 
   margin: 20px 20px 20px 5px;
-}
-
-h1 {
-  color: #FFA5A5;
-  font-family: Helvetica;
 }
 
 /* ========== Album card ========== */
@@ -73,6 +82,9 @@ h1 {
   height: auto;
 }
 
+/* ========== Hover effect for Album art and icons ========== */
+/* Colors and default sizes are set in each Icon svg image, found in folder Asset */
+
 .album-art {
   display: block;
   width: 100%;
@@ -83,11 +95,32 @@ h1 {
   z-index: 1; /* Position album art in the back */
 }
 
+.album-icons {
+  position: absolute;
+  top: 50%; 
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  gap: 10px;
+  opacity: 0; /* Icons not visible */ 
+  z-index: 2; /* Position album icons art to the front */
+  transition: opacity 0.3s ease; /*Smooth transition to show icons on hover */
+}
+
 .album-art-container:hover .album-art {
   opacity: 0.5; /* Album gets darker on hover*/
 }
+.album-art-container:hover .album-icons {
+  opacity: 1; /* Make icons visible on hover */
+}
 
-/* ========== Album icons ========== */
+.album-icons .icon {
+  transition: transform 0.3s ease; /* Smooth transition to "pop out" */
+}
+
+.album-icon .icon:hover {
+  transform: scale(1.2); /* Each Icon pops out / enlarges on hover */
+}
 
 .album-icons {
   position: absolute;
@@ -100,20 +133,8 @@ h1 {
   z-index: 2; /* Position album icons art to the front */
   transition: opacity 0.3s ease;
 }
-.album-icons {
-  width: 24px;
-  height: 24px;
-  fill: #ffffff;
-  transition: transform 0.3s ease;
-}
 
-.album-icon:hover {
-  transform: scale(1.2);
-}
-
-.album-art-container:hover .album-icons {
-  opacity: 1; /* Make icons visible on hover */
-}*/
+/* ========== Styling for Album title and Album artist ========== */
 
 .album-title,
 .album-artist {
@@ -130,8 +151,10 @@ h1 {
   margin-top: 0;
 }
 
+/* ========== Hover effect for Album title link ========== */
+
 .album-link {
-  text-decoration: none;
+  text-decoration: none; /* Remove default underline */
   color: #ffffff;
   min-height: 44px;
   min-width: 44px;
@@ -140,9 +163,12 @@ h1 {
 .album-link:hover {
   font-size: 18px;
   color: #ffffff;
-  font-weight: bold;
-  text-decoration: underline;
+  font-weight: bold; /* Make link bold on hover */
+  text-decoration: underline; /* Add underline on hover */
 }
+
+/* ========== Hover effect for Album artist link ========== */
+
 .album-artist-link {
   text-decoration: none;
   color: #a0a0a0;
@@ -156,16 +182,6 @@ h1 {
   color: #a0a0a0;
   font-weight: bold;
   text-decoration: underline;
-}
-h2 {
-  font-size: 14px;
-  font-family: Helvetica; 
-  color: #a0a0a0;
-}
-p {
-  font-size: 14px;
-  font-family: Helvetica;
-  color: #a0a0a0;
 }
 
 /* ========== Footer section ========== */
